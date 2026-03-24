@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <link rel="stylesheet" href="cal.css">
+</head>
+<body>
+    <center>
+   <div class="calculator">
+    <input type="text" class="display" readonly style="font-size: 40px;" >
+
+    
+    <br>
+    <button class="btn" style="background-color: red; color: aliceblue; font-size: 20px; border-radius: 26px; height: 30px;">AC</button>
+    <button class="btn" style="background-color: red; color: aliceblue; font-size: 20px; border-radius: 26px; height: 30px">DEL</button>
+    <button class="btn" style="background-color: red; color: aliceblue; font-size: 20px; border-radius: 26px; height: 30px">%</button>
+    <button class="btn" style="background-color: red; color: aliceblue; font-size: 20px; border-radius: 26px; height: 30px">^</button>
+    <br>
+
+    <button class="btn">7</button>
+    <button class="btn">8</button>
+    <button class="btn">9</button>
+    <button class="btn" style="background-color:red ; color: aliceblue;">+</button>
+
+    <br>
+    <button class="btn">4</button>
+    <button class="btn">5</button>  
+    <button class="btn">6</button>
+    <button class="btn" style="background-color: red; color: aliceblue;">-</button>
+    <br>
+
+    <button class="btn">1</button>
+    <button class="btn">2</button>
+    <button class="btn">3</button>
+    <button class="btn" style="background-color: red ; color: aliceblue;">*</button>
+    <br>
+    <button class="btn">0</button>
+    <button class="btn" style="background-color: red; color: aliceblue;">.</button>
+    <button class="btn" style="background-color: red; color: aliceblue;">/</button>
+    <button class="btn" style="background-color: red; color: aliceblue;">=</button>  
+   </div>
+    </center>
+    <script>
+let display = document.querySelector(".display");
+let buttons = document.querySelectorAll(".btn");
+
+buttons.forEach(function(button) {
+    button.addEventListener("click", function() {
+        let value = button.textContent;
+
+        if (value === "AC") {
+            display.value ="";
+        } 
+        else if (value === "DEL") {
+            display.value = display.value.slice(0, -1);
+        } 
+        else if (value === "=") {
+            try {
+                display.value = eval(display.value);
+            } catch {
+                display.value = "Error";
+            }
+        } 
+        else if (value === "^") {
+            display.value += "**"; 
+        } 
+        else {
+            display.value += value;
+        }
+    });
+});
+</script
+</body>   
+</html>

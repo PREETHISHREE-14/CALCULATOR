@@ -1,0 +1,45 @@
+.btn{
+    width: 60px;
+    height: 60px;
+    font-size: 40px;
+    margin: 5px;
+}
+button{
+    background-color: gray;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    color: skyblue;
+}
+button:hover{
+    background-color: black;
+    color: white;
+
+}
+input[type="text"]{
+    height: 200px;
+    width: 270px;
+    font-size: 20px;
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+    padding-bottom: 150px;
+    border-radius: 30px;
+}
+body{
+    padding-left: 50px;
+    margin-left: 700px;
+    margin-right: 400px;
+    padding-right: 20px;
+    padding-left: 10px;
+    border-radius: 30px;
+}
+.calculator{
+    background-color: black;
+    border-radius: 30px;
+}
+
+#display{
+    font-size: 500px;
+    color: dodgerblue;
+}
